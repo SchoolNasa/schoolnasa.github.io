@@ -1,40 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 
-  <head>
-    <meta charset="utf-8">
-<!--     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
-    <title>Subway Surfers</title>
-    <link rel="stylesheet" href="game.css" type="text/css">
-  </head>
+    background:
+        linear-gradient(
+            rgba(2, 0, 120, 0.45),
+            rgba(20,0,40,.55)
+        ),
+        url("img/background.png");
 
-  <body>
-    <div id="game">
-        <div id="overlay">
-          <div>Score:
-            <span id="score"></span>
-          </div>
-          <div>Speed:
-            <span id="speed"></span>
-          </div>
-        </div>
-        <div id ="death">
-          <span id="life"></span>
-        </div>
-        <canvas id="glcanvas" width="1900" height="960"></canvas>
-    </div>
-  </body>
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
-  <script src="gl-matrix.js"></script>
-  <script src="mousetrap.js"></script>
-  <script src="hammer.js"></script>
-  <script src="sound.js"></script>
-  <script src="coin.js"></script>
-  <script src="path.js"></script>
-  <script src="surfer.js"></script>
-  <script src="barriers.js"></script>
-  <script src="train.js"></script>
-  <script src="powerups.js"></script>
-  <script src="main.js"></script>
+    color: white;
+}
 
+    .container{
+    max-width:1000px;
+    margin:40px auto;
+
+    background:rgba(15,15,20,.70);
+
+    backdrop-filter:blur(12px);
+
+    border:2px solid rgba(180,80,255,.35);
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 30px rgba(120,0,255,.3);
+}
+    h1, h2, p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    h3{
+      text-align: center;
+      margin: 0px 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffd900ce;
+      text-shadow: 0 0 10px rgba(70, 156, 0, 0.253);
+    }
+
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffd900ce;
+      text-shadow: 0 0 10px rgba(70, 156, 0, 0.253);
+    }
+    
+    h3 {
+      font-size: 3rem;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgb(26, 26, 26);
+    }
+
+    .game-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* always 3 columns */
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .game-buttons button {
+      background: rgba(0, 150, 112, 0.2);
+      border: 2px solid rgba(0, 255, 136, 0.4);
+      border-radius: 15px;
+      padding: 20px;
+      color: #e0f7ff;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 124, 83, 0.644);
+    }
+
+    .game-buttons button:hover {
+      transform: translateY(-6px);
+      background: rgba(0, 255, 136, 0.671);
+      border-color: #00ff6296;
+      box-shadow: 0 8px 25px rgba(0,0,80,0.6);
+    }
+
+    .game-buttons button img {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      border: 2px solid rgba(100,180,255,0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #a0cce0;
+      background: rgba(0,0,40,0.7);
+      backdrop-filter: blur(6px);
+      margin-top: auto;
+    }
+    .logo{
+    width:340px;
+    display:block;
+    margin:auto;
+    margin-bottom:0px;
+    filter: drop-shadow(0 0 20px #8a2eff);
+}
+  </style>
+</head>
+<body>
+  <img src="logo.png" class="logo">
+<h3>SchoolNasa</h3>
+  <div class="container">
+    <h1>Jogos</h1>
+    <p>Alguns jogos podem demorar para carregar.</p>
+
+    <div class="game-buttons">
+      <button onclick="openGame('https://schoolnasa.github.io/games')"> <img src="img/games-controller.png">Games</button>
+      <button onclick="openGame('https://schoolnasa.github.io/tools')"> <img src="img/ToolsIcon.png">Tools</button>
+    
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script>
+    function openGame(url){
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
 </html>
